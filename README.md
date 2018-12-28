@@ -22,4 +22,5 @@ CREATE TABLE plantas(
 	created DATE NOT NULL DEFAULT CURRENT_DATE,
 	CONSTRAINT fk_usuarios_plantas FOREIGN KEY (usuario_id)
 	REFERENCES usuarios (id)
-);```
+);
+```
