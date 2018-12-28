@@ -6,6 +6,7 @@ Uma Aplicação para gerenciar e catalogar plantas
 ```
 CREATE TABLE usuarios(
 	id SERIAL PRIMARY KEY,
+	nivel_acesso BOOLEAN DEFAULT FALSE,
 	nome VARCHAR(100) NOT NULL,
 	email VARCHAR(200) NOT NULL UNIQUE,
 	senha VARCHAR(100) NOT NULL,
@@ -21,5 +22,4 @@ CREATE TABLE plantas(
 	created DATE NOT NULL DEFAULT CURRENT_DATE,
 	CONSTRAINT fk_usuarios_plantas FOREIGN KEY (usuario_id)
 	REFERENCES usuarios (id)
-);
-```
+);```
