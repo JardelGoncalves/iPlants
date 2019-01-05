@@ -3,6 +3,7 @@ Uma Aplicação para gerenciar e catalogar plantas
 
 
 ## Esquema do Banco de Dados
+Crie um Banco de dados (`PostgreSQL`) com  o nome `iplants-db` com as seguintes tabelas: 
 ```
 CREATE TABLE usuarios(
 	id SERIAL PRIMARY KEY,
@@ -24,3 +25,4 @@ CREATE TABLE plantas(
 	REFERENCES usuarios (id)
 );
 ```
+Com o banco criado, clone este repositório, importe o arquivo `.war` e configure o `Tomcat` e execute.
